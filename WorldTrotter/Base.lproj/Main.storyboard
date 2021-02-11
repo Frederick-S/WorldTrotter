@@ -51,6 +51,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OX4-Qf-5cQ" firstAttribute="centerX" secondItem="ofm-k8-68O" secondAttribute="centerX" id="4PL-ad-dbW"/>
                             <constraint firstItem="4F0-O2-dwA" firstAttribute="centerX" secondItem="ofm-k8-68O" secondAttribute="centerX" id="5XU-WR-dtR"/>
@@ -66,13 +67,22 @@
                             <constraint firstItem="OX4-Qf-5cQ" firstAttribute="top" secondItem="4F0-O2-dwA" secondAttribute="bottom" constant="8" id="wJV-d8-fGd"/>
                             <constraint firstItem="buA-4g-rv2" firstAttribute="centerX" secondItem="ofm-k8-68O" secondAttribute="centerX" id="zPl-ss-Mzq"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="yUx-RA-pQJ" appends="YES" id="jT8-vj-ddn"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Convert" image="ConvertIcon" id="8IY-3b-Rbb"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="4F0-O2-dwA" id="QvW-c1-egf"/>
+                        <outlet property="textField" destination="buA-4g-rv2" id="fuW-Id-P4K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yUx-RA-pQJ">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="QRP-5C-JJi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="100.44642857142857"/>
         </scene>
